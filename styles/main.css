@@ -1,0 +1,42 @@
+a:link {
+    color:  dimgrey;
+    background-color: transparent;
+}
+
+a:hover {
+    color:  #f76511;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:visited {
+    color:  dimgrey;
+    background-color: transparent;
+}
+
+a:active {
+    color: dimgrey;
+    background-color: transparent;
+}
+
+.container {
+    padding: 1em;
+    background-color: white;
+    clear: left;
+    text-align: center;
+}
+
+.orange-font {
+    color: #f76511;
+}
+
+.jumbotron {
+    background-color: white;
+    text-align: center;
+}
+
+.navbar-expand-sm  li {
+    padding-left:30px;
+    padding-right:30px;
+    text-align: center;
+}
