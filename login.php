@@ -1,7 +1,9 @@
 <?php
+session_start();
 require("config.php");
-$submitted_username = '';
-if(!empty($_POST)){
+$submittedUsername = $_POST['username'];
+$submittedPassword = $_POST['password'];
+if($submittedUsername !== null && $submittedPassword !== null){
     $query = " 
             SELECT 
                 id, 
@@ -14,21 +16,20 @@ if(!empty($_POST)){
                 username = :username 
         ";
     $query_params = array(
-        ':username' => $_POST['username']
+        ':username' => $submittedUsername
     );
 
-    try{
+    try {
         $stmt = $db->prepare($query);
         $result = $stmt->execute($query_params);
+    } catch(PDOException $ex) {
+        die("Failed to run query: " . $ex->getMessage());
     }
-    catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
+
     $login_ok = false;
     $row = $stmt->fetch();
     if($row){
-        $check_password = hash('sha256', $_POST['password'] . $row['salt']);
-        for($round = 0; $round < 65536; $round++){
-            $check_password = hash('sha256', $check_password . $row['salt']);
-        }
+        $check_password = hash('sha256', $submittedPassword . $row['salt']);
         if($check_password === $row['password']){
             $login_ok = true;
         }
@@ -37,13 +38,12 @@ if(!empty($_POST)){
     if($login_ok){
         unset($row['salt']);
         unset($row['password']);
-        $_SESSION['user'] = $row;
-        header("Location: secret.php");
-        die("Redirecting to: secret.php");
-    }
-    else{
+        $_SESSION['name'] = $submittedUsername;
+        $_SESSION['login'] = "ok";
+        header("Location: willkommen.php");
+        die("Redirecting to: willkommen.php");
+    } else {
         print("Login Failed.");
-        $submitted_username = htmlentities($_POST['username'], ENT_QUOTES, 'UTF-8');
     }
 }
 ?>

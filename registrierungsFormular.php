@@ -2,7 +2,7 @@
 <html>
 <?php include("head.html");?>
 <body>
-<?php include("navigation.html");?>
+<?php include("navigation.php");?>
 
 <style>
     .btn-info {
@@ -18,7 +18,7 @@
 <form action="register.php" method="post">
     <label>Name:</label>
     <input type="text" name="username" value="" /><br>
-    <label>E-mail:</label>
+    <label>E-Mail:</label>
     <input type="text" name="email" value="" /><br>
     <label>Passwort:</label>
     <input type="password" name="password" value="" /><br>

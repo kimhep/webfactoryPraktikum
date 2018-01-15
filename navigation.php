@@ -5,7 +5,6 @@
 </style>
 
 
-
 <nav class="navbar navbar-toggleable-md navbar-light bg-faded navbar-expand-sm" role="navigation">
     <button
             class="navbar-toggler"
@@ -28,7 +27,7 @@
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false">
-                    Social Media
+                            Social Media
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link"href="instagram.php">Instagram</a></li>
@@ -43,7 +42,7 @@
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false">
-                    Wochen
+                            Wochen
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link"href="woche1.php">1. Woche</a></li>
@@ -52,6 +51,13 @@
                 </ul>
             </li>
 
+    <?php
+        if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
+    ?>
+            <li><a class="nav-link" href="logout.php">Ausloggen</a></li>
+    <?php
+        } else {
+            ?>
             <li class="dropdown">
                 <a
                         class="nav-link dropdown-toggle"
@@ -63,22 +69,22 @@
                 </a>
                 <ul class="dropdown-menu">
                     <form action="login.php" method="post">
-                        Username:<br />
-                        <input type="text" name="username" value="<?php echo $submitted_username; ?>" />
-                        <br /><br />
-                        Password:<br />
-                        <input type="password" name="password" value="" />
-                        <br /><br />
-                        <input type="submit" class="btn btn-info" value="Login" />
+                        Username:<br/>
+                        <input type="text" name="username" required="required"
+                               value="<?php echo $submitted_username; ?>"/>
+                        <br/><br/>
+                        Password:<br/>
+                        <input type="password" name="password" required="required" value=""/>
+                        <br/><br/>
+                        <input type="submit" class="btn btn-info" value="Login"/>
                     </form>
 
 
                 </ul>
             </li>
-
-
-                </ul>
-
+        <?php
+            }
+        ?>
         </ul>
     </div>
 </nav>

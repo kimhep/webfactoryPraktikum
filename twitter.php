@@ -2,7 +2,7 @@
 <html>
     <?php include("head.html");?>
     <body>
-        <?php include("navigation.html");?>
+        <?php include("navigation.php");?>
 
         <main>
             <div class="jumbotron orange-font">
