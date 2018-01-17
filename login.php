@@ -27,18 +27,19 @@ if($submittedUsername !== null && $submittedPassword !== null){
     }
 
     $login_ok = false;
-    $row = $stmt->fetch();
-    if($row){
-        $check_password = hash('sha256', $submittedPassword . $row['salt']);
-        if($check_password === $row['password']){
+    $userFromDatabase = $stmt->fetch();
+    if($userFromDatabase){
+        $check_password = hash('sha256', $submittedPassword . $userFromDatabase['salt']);
+        if($check_password === $userFromDatabase['password']){
             $login_ok = true;
         }
     }
 
     if($login_ok){
-        unset($row['salt']);
-        unset($row['password']);
+        unset($userFromDatabase['salt']);
+        unset($userFromDatabase['password']);
         $_SESSION['name'] = $submittedUsername;
+        $_SESSION['user_id'] = $userFromDatabase['id'];
         $_SESSION['login'] = "ok";
         header("Location: willkommen.php");
         die("Redirecting to: willkommen.php");

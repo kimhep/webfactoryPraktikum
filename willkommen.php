@@ -1,8 +1,7 @@
 <?php
 session_start();
-if (isset($_SESSION["login"]) && $_SESSION["login"] == "ok") {
+if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
     ?>
-
 <!DOCTYPE html>
 <html>
 <?php include("head.html");?>

@@ -51,10 +51,18 @@
                 </ul>
             </li>
 
-    <?php
-        if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
-    ?>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a class="nav-link" href="blogPosts.php">Blog</a></li>
+
+                    <?php
+                    session_start();
+                    if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
+                    ?>
+
             <li><a class="nav-link" href="logout.php">Ausloggen</a></li>
+            <li><a class="nav-link" href="beitragErstellen.php">Beitrag erstellen</a></li>
+
     <?php
         } else {
             ?>
