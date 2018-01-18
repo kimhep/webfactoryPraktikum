@@ -1,6 +1,7 @@
 <style>
     .btn-info {
-        background-color: #f76511 ;
+        background-color: #6233a0 ;
+        border:#6233a0 ;
     }
 </style>
 
@@ -19,7 +20,6 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <ul class="nav navbar-nav navbar-left">
             <li><a class="nav-link" href="index.php">Startseite</a></li>
-            <li><a class="nav-link" href="registrierungsFormular.php">Registrierung</a></li>
             <li class="dropdown">
                 <a
                         class="nav-link dropdown-toggle"
@@ -31,41 +31,38 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link"href="instagram.php">Instagram</a></li>
-                    <li><a class="nav-link"href="twitter.php">Twitter </a></li>
 
                 </ul>
             </li>
-            <li class="dropdown">
-                <a
-                        class="nav-link dropdown-toggle"
-                        id="navbarDropdownMenuLink"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false">
-                            Wochen
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link"href="woche1.php">1. Woche</a></li>
-                    <li><a class="nav-link"href="woche2.php">2. Woche </a></li>
-
-                </ul>
-            </li>
-
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a class="nav-link" href="blogPosts.php">Blog</a></li>
 
                     <?php
                     session_start();
                     if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
                     ?>
 
+                    <li class="dropdown">
+                        <a
+                                class="nav-link dropdown-toggle"
+                                id="navbarDropdownMenuLink"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="nav-link"href="blogPosts.php">Blogeinträge</a></li>
+                            <li><a class="nav-link"href="beitragErstellenFormular.php">Eintrag erstellen </a></li>
+
+                        </ul>
+                    </li>
             <li><a class="nav-link" href="logout.php">Ausloggen</a></li>
-            <li><a class="nav-link" href="beitragErstellen.php">Beitrag erstellen</a></li>
+                </ul>
+</nav>
 
     <?php
         } else {
             ?>
+        <li><a class="nav-link" href="blogPosts.php">Blog</a></li>
             <li class="dropdown">
                 <a
                         class="nav-link dropdown-toggle"
@@ -81,12 +78,13 @@
                         <input type="text" name="username" required="required"
                                value="<?php echo $submitted_username; ?>"/>
                         <br/><br/>
-                        Password:<br/>
+                        Passwort:<br/>
                         <input type="password" name="password" required="required" value=""/>
                         <br/><br/>
                         <input type="submit" class="btn btn-info" value="Login"/>
                     </form>
 
+                    <li><a class="nav-link" href="registrierungsFormular.php">Registrierung</a></li>
 
                 </ul>
             </li>
