@@ -33,13 +33,13 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
             <form action="register.php" method="post">
                 <div class="form-group">
                     <label for="usr">Username:</label>
-                    <input type="text" name="username" class="form-control" id="usr">
+                    <input type="text" name="username" class="form-control" id="usr" required="required">
                 </div><div class="form-group">
                     <label for="usr">Passwort:</label>
-                    <input type="password" name="password" class="form-control" id="usr">
+                    <input type="password" name="password" class="form-control" id="usr" required="required">
                 </div><div class="form-group">
                     <label for="usr">E-Mail:</label>
-                    <input type="text" name="email" class="form-control" id="usr">
+                    <input type="text" name="email" class="form-control" id="usr" required="required">
 
                 </div>
                 <div>
