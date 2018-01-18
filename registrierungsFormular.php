@@ -11,31 +11,41 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
     <html>
     <?php include("head.html"); ?>
     <body>
+    <style>
+        .jumbotron {
+            color: #6233a0;
+        }
+    </style>
+
     <?php include("navigation.php"); ?>
 
     <style>
         .btn-info {
-            background-color: #f76511;
+            background-color: #6233a0;
         }
     </style>
     <body>
 
     <main class="container">
-        <div class="jumbotron orange-font">
+        <div class="jumbotron">
             <h1>Mein Praktikumsbericht - Registrierung</h1>
 
             <form action="register.php" method="post">
-                <label>Name:</label>
-                <input type="text" name="username"/><br>
-                <label>E-Mail:</label>
-                <input type="text" name="email"/><br>
-                <label>Passwort:</label>
-                <input type="password" name="password" value=""/><br>
-                <input type="submit" class="btn btn-info" value="Register"/>
+                <div class="form-group">
+                    <label for="usr">Username:</label>
+                    <input type="text" name="username" class="form-control" id="usr">
+                </div><div class="form-group">
+                    <label for="usr">Passwort:</label>
+                    <input type="password" name="password" class="form-control" id="usr">
+                </div><div class="form-group">
+                    <label for="usr">E-Mail:</label>
+                    <input type="text" name="email" class="form-control" id="usr">
+
+                </div>
+                <div>
+                    <input type="submit" class="btn btn-info" value="Register"/></br>
+                </div>
             </form>
-
-    </body>
-
 
     </body>
     </html>
