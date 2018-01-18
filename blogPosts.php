@@ -10,8 +10,9 @@ p   {
 }
 ul.demo {
     list-style-type: none;
-    margin: 3%;
-    padding: 3%;
+    margin: 5%;
+    padding: 5%;
+    word-wrap: break-word
 
 
 }
@@ -25,7 +26,7 @@ ul.demo {
             <?php
             require "config.php";
             try {
-                $stmt = $db->prepare("SELECT user_id, title, text, erstellungsDatum FROM posts ORDER BY erstellungsDatum DESC");
+                $stmt = $db->prepare("SELECT id, user_id, title, teaser, text, erstellungsDatum FROM posts ORDER BY erstellungsDatum DESC");
                 $stmt->execute();
                 $blogPosts = $stmt->fetchAll();
             } catch (PDOException $ex) {
@@ -43,10 +44,10 @@ ul.demo {
                     }
                     echo
                           "<li>"
-                        . "<h2 class=''>" . htmlspecialchars($blogPost['title']) . "</h2>"
-                        . "<p class=''>Autor: " . htmlspecialchars($autor) . "</p>"
+                        . "<h2>" . htmlspecialchars($blogPost['title']) . "</h2>"
+                        . "<p>Autor: " . htmlspecialchars($autor) . "</p>"
                         . "<p>Erstellt am: " . $erstellungsDatum->format('d.m.Y H:i') . "</p>"
-                        . "<p>" . html_entity_decode($blogPost['text']) . "</p>"
+                        . "<p>" . htmlspecialchars($blogPost['teaser']) . "<a href='blogPostsArtikel.php'>...zum Artikel </p>"
                         . "</li>";
                 }
             echo "</ul>\n";
