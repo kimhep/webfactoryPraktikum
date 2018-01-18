@@ -3,11 +3,16 @@
 <html>
 <?php include("head.html");?>
 <body>
+<style>
+    .jumbotron {
+        color: #6233a0;
+    }
+</style>
 
 <?php include("navigation.php");?>
 
         <main class="container">
-            <div class="jumbotron orange-font">
+            <div class="jumbotron ">
                 <h1>Mein Praktikumsbericht</h1>
                 <p>Auf dieser Webiste kannst du sehen, wie ich mit Hilfe von "bootstrap" meine Website verbessert habe.</p>
 
