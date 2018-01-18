@@ -8,7 +8,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
     <body>
     <?php include("navigation.php"); ?>
 
-    <?php include("beitragErstellenFormular.html") ?>
+    <?php include("beitragErstellenFormular.php") ?>
 
     <?php include("scripts.html"); ?>
     </body>
