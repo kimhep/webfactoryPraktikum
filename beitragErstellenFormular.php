@@ -26,11 +26,14 @@
                     <label for="exampleInputEmail1">Titel</label>
                     <input type="text" class="form-control" name="titel" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Titel" required="required">
                 </div>
-
-            <div class="form-group">
-                <label for="exampleTextarea">Text</label>
-                <textarea class="form-control" name="text" id="exampleTextarea" rows="3" placeholder="Text" required="required"></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Teaser</label>
+                    <textarea class="form-control" name="teaser" id="exampleTextarea" rows="3" placeholder="Text" required="required"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea">Text</label>
+                    <textarea class="form-control" name="text" id="exampleTextarea" rows="3" placeholder="Text" required="required"></textarea>
+                </div>
                 <button type="submit" class="btn btn-primary">Speichern</button>
         </form>
     </div>
