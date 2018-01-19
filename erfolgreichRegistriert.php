@@ -16,13 +16,17 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
     <style>
         .jumbotron {
             color: #7134c1;
+            font-family: 'EB Garamond', serif;
+        }
+        .font {
+            font-family: 'EB Garamond', serif;
         }
     </style>
 
     <main>
         <div class="jumbotron">
-            <h1>Willkommen</h1>
-            <p>Du hast dich erfolgreich registriert.</p>
+            <h1 class="font">Herzlichen Glückwunsch!</h1>
+            <p class="font">Du hast dich erfolgreich registriert.</p>
     </main>
     </body>
     </html>
