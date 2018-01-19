@@ -1,7 +1,13 @@
 <?php
 session_start();
 if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
+    header("Location: index.php");
     ?>
+    <?php
+    } else {
+
+}
+?>
     <!DOCTYPE html>
     <html>
     <?php include("head.html");?>
@@ -9,7 +15,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
     <?php include("navigation.php");?>
     <style>
         .jumbotron {
-            color: #6233a0;
+            color: #7134c1;
         }
     </style>
 
@@ -20,8 +26,4 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
     </main>
     </body>
     </html>
-    <?php
-} else {
-    header("Location: index.php");
-}
-?>
+
