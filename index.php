@@ -6,6 +6,10 @@
 <style>
     .jumbotron {
         color: #6233a0;
+        font-family: 'EB Garamond', serif;
+    }
+    .link {
+        text-decoration: underline;
     }
 </style>
 
@@ -20,7 +24,7 @@
             <div class="tab-content">
                 <div id="home" class="container tab-pane active"><br>
                     <h3>Startseite</h3>
-                    <p>Hallo, hier kannst du sehen, was ich innerhalb der 2 Wochen Praktikum alles gelernt habe. Zudem kannst du dir auch auch mein <a href="https://github.com/kimhep/webfactoryPraktikum">Git</a> anschauen um zu sehen, wie der Code aussiehst.</p>
+                    <p>Hallo, hier kannst du sehen, was ich innerhalb der 2 Wochen Praktikum alles gelernt habe. Zudem kannst du dir auch auch mein <a class="link" href="https://github.com/kimhep/webfactoryPraktikum">Git</a> anschauen um zu sehen, wie der Code aussiehst.</p>
                 </div>
 
                 </div>
