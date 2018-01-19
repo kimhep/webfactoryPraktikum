@@ -5,18 +5,22 @@
 <?php include("head.html");?>
     <body>
 <style>
-p   {
-
-}
 ul.demo {
     list-style-type: none;
     margin: 5%;
     padding: 5%;
     word-wrap: break-word
-
-
 }
-
+.buttonAsLink {
+    background:none!important;
+    color:inherit;
+    border:none;
+    padding:0!important;
+    font: inherit;
+    /*border is optional*/
+    border-bottom:1px solid #444;
+    cursor: pointer;
+}
 </style>
     <?php include("navigation.php");?>
         <div class="jumbotron ">
@@ -47,7 +51,9 @@ ul.demo {
                         . "<h2>" . htmlspecialchars($blogPost['title']) . "</h2>"
                         . "<p>Autor: " . htmlspecialchars($autor) . "</p>"
                         . "<p>Erstellt am: " . $erstellungsDatum->format('d.m.Y H:i') . "</p>"
-                        . "<p>" . htmlspecialchars($blogPost['teaser']) . "<a href='blogPostsArtikel.php'>...zum Artikel </p>"
+                        . "<p>" . htmlspecialchars($blogPost['teaser']) . "<form action='blogPostsArtikel.php' method='get'>"
+                        . "<input type='hidden' name='blogId' value='" . $blogPost['id'] . "'>"
+                        . "<button class='buttonAsLink' type='submit'>...zum Artikel</button></form>"
                         . "</li>";
                 }
             echo "</ul>\n";
