@@ -9,6 +9,8 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
 <style>
     .jumbotron {
         color: #6233a0;
+        font-family: 'EB Garamond', serif;
+        font-size: large;
     }
 </style>
 
@@ -18,6 +20,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
 <div class="jumbotron">
 <h1>Willkommen</h1>
 <p>Du hast dich erfolgreich eingeloggt.</p>
+    <a href="blogPosts.php">zu den Blogartikeln</a>
 </main>
 </body>
 </html>
