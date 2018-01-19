@@ -53,7 +53,8 @@ ul.demo {
                         . "<p>Erstellt am: " . $erstellungsDatum->format('d.m.Y H:i') . "</p>"
                         . "<p>" . htmlspecialchars($blogPost['teaser']) . "<form action='blogPostsArtikel.php' method='get'>"
                         . "<input type='hidden' name='blogId' value='" . $blogPost['id'] . "'>"
-                        . "<button class='buttonAsLink' type='submit'>...zum Artikel</button></form>"
+                        //. "<a href='blogPostsArtikel.php/?blogPostId=' '. $blogPost['id']' >"...zum Autor"</a>"//
+                        . "<a href='blogPostsArtikel.php?blogId=" . $blogPost['id'] .  "'>...zum Artikel</a>"
                         . "</li>";
                 }
             echo "</ul>\n";
