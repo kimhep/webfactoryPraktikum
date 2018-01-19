@@ -8,16 +8,19 @@ a:hover {
     color:  #7134c1;
     background-color: transparent;
     text-decoration: underline;
+    font-family: 'EB Garamond', serif;
 }
 
 a:visited {
     color:  dimgrey;
     background-color: transparent;
+    font-family: 'EB Garamond', serif;
 }
 
 a:active {
     color: dimgrey;
     background-color: transparent;
+    font-family: 'EB Garamond', serif;
 }
 
 .container {
@@ -25,25 +28,44 @@ a:active {
     background-color: white;
     clear: left;
     text-align: center;
+    font-family: 'EB Garamond', serif;
 }
 
 .orange-font {
     color: #7134c1;
+    font-family: 'EB Garamond', serif;
 }
 
 .jumbotron {
     background-color: white;
     text-align: center;
     color: #7134c1;
+    font-family: 'EB Garamond', serif;
 }
 
 .navbar-expand-sm  li {
     padding-left:30px;
     padding-right:30px;
     text-align: center;
+    font-family: 'EB Garamond', serif;
 }
 
 .btn-primary {
     background-color: #7134c1;
     border: #7134c1 ;
+    font-family: 'EB Garamond', serif;
 }
+
+.btn-info {
+    background-color: #7134c1;
+    border: #7134c1 ;
+    font-family: 'EB Garamond', serif;
+
+}
+.btn-info:hover {
+    background-color: #7134c1;
+    border: #7134c1 ;
+    font-family: 'EB Garamond', serif;
+
+}
+
