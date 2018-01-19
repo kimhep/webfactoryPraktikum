@@ -45,6 +45,10 @@ ul.demo {
                     } catch (PDOException $ex) {
                         die("Fehler beim holen des Autors: " . $ex->getMessage());
                     }
+                    $beitragLoeschenLink = "";
+                    if($blogPost['user_id'] == $_SESSION['user_id']) {
+                        $beitragLoeschenLink = "<a href='beitragLoeschen.php?beitragId=" . $blogPost['id'] .  "'>Löschen</a>";
+                    }
                     echo
                           "<li>"
                         . "<h2 class='headline'>" . htmlspecialchars($blogPost['title']) . "</h2>"
@@ -52,8 +56,8 @@ ul.demo {
                         . "<p >Erstellt am: " . $erstellungsDatum->format('d.m.Y H:i') . "</p>"
                         . "<p>" . htmlspecialchars($blogPost['teaser']) . "<form action='blogPostsArtikel.php' method='get'>"
                         . "<input type='hidden' name='blogId' value='" . $blogPost['id'] . "'>"
-                        //. "<a href='blogPostsArtikel.php/?blogPostId=' '. $blogPost['id']' >"...zum Autor"</a>"//
                         . "<a href='blogPostsArtikel.php?blogId=" . $blogPost['id'] .  "'>...zum Artikel</a>"
+                        . $beitragLoeschenLink
                         . "</li>";
                 }
             echo "</ul>\n";
