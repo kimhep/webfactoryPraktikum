@@ -1,10 +1,20 @@
 <style>
     .btn-info {
-        background-color: #6233a0 ;
-        border:#6233a0 ;
+        background-color: #7134c1;
+        border: #7134c1 ;
+
+    }
+    .btn-info:hover {
+        background-color: dimgrey;
+        border: dimgrey ;
+
+    }
+    .btn-info:hover {
+        background-color: dim;
+        border: dimgrey ;
+
     }
 </style>
-
 
 <nav class="navbar navbar-toggleable-md navbar-light bg-faded navbar-expand-sm" role="navigation">
     <button
@@ -50,8 +60,8 @@
                             Blog
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="nav-link"href="blogPosts.php">Blogeinträge</a></li>
-                            <li><a class="nav-link"href="beitragErstellenFormular.php">Eintrag erstellen </a></li>
+                            <li><a class="nav-link" href="blogPosts.php">Blogeinträge</a></li>
+                            <li><a class="nav-link" href="beitragErstellenFormular.php">Eintrag erstellen </a></li>
 
                         </ul>
                     </li>
