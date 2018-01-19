@@ -14,6 +14,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
     <style>
         .jumbotron {
             color: #6233a0;
+            font-family: 'EB Garamond', serif;
         }
     </style>
 
