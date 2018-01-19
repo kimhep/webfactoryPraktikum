@@ -10,17 +10,16 @@ ul.demo {
     margin: 5%;
     padding: 5%;
     word-wrap: break-word
+    font-family: 'EB Garamond', serif;
 }
-.buttonAsLink {
-    background:none!important;
-    color:inherit;
-    border:none;
-    padding:0!important;
-    font: inherit;
-    /*border is optional*/
-    border-bottom:1px solid #444;
-    cursor: pointer;
+.headline {
+    color: #6233a0;
+    font-family: 'EB Garamond', serif;
 }
+    .jumbotron {
+        font-family: 'EB Garamond', serif;
+        font-size: large;
+    }
 </style>
     <?php include("navigation.php");?>
         <div class="jumbotron ">
@@ -48,9 +47,9 @@ ul.demo {
                     }
                     echo
                           "<li>"
-                        . "<h2>" . htmlspecialchars($blogPost['title']) . "</h2>"
+                        . "<h2 class='headline'>" . htmlspecialchars($blogPost['title']) . "</h2>"
                         . "<p>Autor: " . htmlspecialchars($autor) . "</p>"
-                        . "<p>Erstellt am: " . $erstellungsDatum->format('d.m.Y H:i') . "</p>"
+                        . "<p >Erstellt am: " . $erstellungsDatum->format('d.m.Y H:i') . "</p>"
                         . "<p>" . htmlspecialchars($blogPost['teaser']) . "<form action='blogPostsArtikel.php' method='get'>"
                         . "<input type='hidden' name='blogId' value='" . $blogPost['id'] . "'>"
                         //. "<a href='blogPostsArtikel.php/?blogPostId=' '. $blogPost['id']' >"...zum Autor"</a>"//
