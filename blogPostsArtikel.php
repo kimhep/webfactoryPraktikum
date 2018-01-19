@@ -6,18 +6,19 @@
         <?php include("navigation.php");?>
         <style>
             .headline {
+                font-family: 'EB Garamond', serif;
                 list-style-type: none;
-                margin: 1%;
-                padding: 1%;
+                margin: 3%;
+                padding: 3%;
                 color: #6233a0;
             }
             .text {
                 word-wrap: break-word;
-               margin: 1%;
-                padding: 1%;
+               margin: 2%;
+                padding: 2%;
+                font-family: 'EB Garamond', serif;
+                font-size: large;
             }
-
-
         </style>
         <?php
         require "config.php";
