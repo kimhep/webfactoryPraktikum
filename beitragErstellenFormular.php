@@ -2,21 +2,25 @@
 
 <body>
 <style>
-
     .btn-primary {
         background-color: #6233a0;
         border: #6233a0 ;
+        font-family: 'EB Garamond', serif;
     }
     .btn-primary:hover {
         background-color: dimgrey;
         border: dimgrey;
+        font-family: 'EB Garamond', serif;
     }
      .jumbotron {
          color: #6233a0;
+         font-family: 'EB Garamond', serif;
+         font-size: large;
      }
 
 </style>
 <?php include ("navigation.php")?>
+
     <div class="jumbotron orange-font">
         <h1>Mein Praktikumsbericht - Beitrag erstellen</h1>
 
