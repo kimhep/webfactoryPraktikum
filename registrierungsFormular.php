@@ -43,7 +43,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] === "ok") {
 
                 </div>
                 <div>
-                    <input type="submit" class="btn btn-info" value="Register"/></br>
+                    <input type="submit" class="btn btn-info" value="Register"/><br>
                 </div>
             </form>
 
