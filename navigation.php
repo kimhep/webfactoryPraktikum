@@ -2,17 +2,27 @@
     .btn-info {
         background-color: #7134c1;
         border: #7134c1 ;
-
+        font-family: 'EB Garamond', serif;
     }
     .btn-info:hover {
         background-color: dimgrey;
         border: dimgrey ;
-
+        font-family: 'EB Garamond', serif;
     }
     .btn-info:hover {
         background-color: dim;
         border: dimgrey ;
+        font-family: 'EB Garamond', serif;
 
+    }
+    .dropdown-menu {
+        font-family: 'EB Garamond', serif;
+
+
+    }
+    .nav-link {
+        font-family: 'EB Garamond', serif;
+        font-size: large;
     }
 </style>
 
