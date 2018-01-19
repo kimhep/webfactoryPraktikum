@@ -10,7 +10,7 @@ if(!empty($_POST))
     if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
     { die("Invalid E-Mail Address"); }
 
-    // Check if the username is already taken
+    // Username überprüfung
     $query = " 
             SELECT 
                 1 
@@ -44,7 +44,7 @@ if(!empty($_POST))
     $row = $stmt->fetch();
     if($row){ die("This email address is already registered"); }
 
-    // Add row to database
+    // Reihe zu Datenbank hnzufügen
     $query = " 
             INSERT INTO users ( 
                 username, 
@@ -73,7 +73,7 @@ if(!empty($_POST))
         $result = $stmt->execute($query_params);
     }
     catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
-    header("Location: index.php");
+    header('Location: erfolgreichRegistriert.php');
     die("Redirecting to index.php");
 }
 ?>
